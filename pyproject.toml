@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voronoi-lab"
+version = "0.1.0"
+description = "From overlapping disks to a Voronoi tessellation, built from perpendicular bisectors"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "matplotlib>=3.7", "pillow>=10"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+voronoi-lab = "voronoi_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
